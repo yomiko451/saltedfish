@@ -35,12 +35,12 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
         with:
-          version: 8.6.12
+          version: 8.15.6
       # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: pnpm
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: blog/.vitepress/dist
 
   # 部署工作
   deploy:
