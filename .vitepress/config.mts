@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/saltedfish/",
-  title: "My Blog",
-  description: "A VitePress Site",
+  title: "yomiko451",
+  description: "yomiko451的个人文档",
   themeConfig: {
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
