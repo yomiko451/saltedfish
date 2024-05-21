@@ -16,10 +16,10 @@ hero:
 
 features:
   - title: 随缘更新
-    details: 咸鱼也是鱼，不摸心里过不去。
+    details: 更新什么的不存在的，哼！
   - title: 没有干货
-    details: 咸鱼有点咸，吃前要泡水里边。
+    details: 大海啊，你全是水。
   - title: 绝不客观
-    details: 咸鱼倒着挂，屁股在上头在下。
+    details: 立场，立场，还是TM的立场。
 ---
 
