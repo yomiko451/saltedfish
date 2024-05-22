@@ -6,13 +6,19 @@ hero:
   name: "Yomiko451"
   text: "个人在线文档"
   tagline: 而视茫茫，而发苍苍，苟活一世，只是条咸鱼罢了
+  image:
+    src: /logo.png
+    alt: Yomiko451
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 站点简介
+      link: /doc/about
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 编程技术
+      link: /doc/技术分享/
+    - theme: alt
+      text: 娱乐资讯
+      link: /doc/娱乐资讯/
 
 features:
   - title: 随缘更新
