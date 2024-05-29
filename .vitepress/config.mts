@@ -2,10 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: [['link', { rel: 'icon', href: '/saltedfish/logo.png' }]],
   base: "/saltedfish/",
   title: "Yomiko451",
   description: "Yomiko451的个人文档",
-  head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
   themeConfig: {
 
     // https://vitepress.dev/reference/default-theme-config
