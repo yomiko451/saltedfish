@@ -36,7 +36,7 @@ export default defineConfig({
         {
           text: 'Rust',
           items: [
-            { text: '初次尝试WebAssembly', link: '/doc/技术分享/rust/初次尝试WebAssembly' },
+            { text: '初次尝试WebAssembly', link: '/doc/技术分享/Rust/初次尝试WebAssembly' },
             
           ]
         },
