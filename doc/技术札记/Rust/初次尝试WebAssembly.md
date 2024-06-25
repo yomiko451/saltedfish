@@ -2,13 +2,13 @@
 
 在学习Rust和前端的过程中，时不时会接触到与WebAssembly相关的内容，逐渐地也就对这门技术好奇了起来，今天终于下定决心来尝试一下。
 
-以下内容主要参考的是这本[《WebAssembly in Rust》](https://rustwasm.github.io/docs/book/introduction.html)中的新手教程，教程中前端用的是npm+webpack，我这里用的是pnpm+vite，所以有些地方需要做些调整。
+以下内容主要参考了这本[《WebAssembly in Rust》](https://rustwasm.github.io/docs/book/introduction.html)中的新手教程，教程中前端用的是npm+webpack，我这里用的是pnpm+vite，所以有些地方需要做些调整。
 
 ## 前置工作
 
 工欲善其事，必先利其器，捣鼓WebAssembly首先当然是要安装相关的工具和依赖了。Rust和pnpm的安装就不赘述了，具体可以参考[《Rust中文文档》](https://www.rust-lang.org/zh-CN/install.html)和[《pnpm中文文档》](https://pnpm.io/zh/installation)。
 
-搞定Rust和pnpm之后，接着用`cargo install`命令分别安装wasm-pack和cargo-generate，前者主要用于构建、测试和发行WebAssembly文件，非常非常重要，后者主要用于快速生成Rust项目的模板，如果你更愿意自己搭建项目，可以不安装。
+搞定Rust和pnpm之后，接着用`cargo install`命令分别安装wasm-pack和cargo-generate，前者主要用于构建、测试和发行WebAssembly文件，非常非常重要，后者主要用于快速生成Rust项目的模板，如果想自己一步步搭建项目，可以不安装。
 
 ```bash
 cargo install wasm-pack
@@ -23,7 +23,7 @@ cargo install cargo-generate
 cargo generate --git https://github.com/rustwasm/wasm-pack-template
 ```
 
-项目构成大体上就是一个lib包，核心文件就是这个`src/lib.rs`，目前版本文件内容与教程有所些许不同，但不影响后续操作。
+项目构成大体上就是一个lib包，核心文件就是这个`src/lib.rs`，目前版本模板文件内容与教程中有些许不同，但不影响后续操作。
 
 lib.rs文件内容如下，其中`greet`函数被我稍微改了下：
 
@@ -51,7 +51,7 @@ pub fn greet(name: &str) {
 wasm-pack build
 ```
 
-如果构建不出错，那么就可以在`pkg`目录下看到`hello_world_bg.wasm`和`hello_world.js`文件，它们就是本次初体验所需要的。
+如果构建不出错，那么就可以在项目根目录看到`pkg`文件夹，这就是我们需要的构建产物啦。
 
 ## 运行WebAssembly文件
 
@@ -90,7 +90,7 @@ import * as wasm from "wasm-game-of-life";
 wasm.greet('yomiko451');
 ```
 
-然后就是重点了，vite目前不直接支持wasm，所以需要安装一个叫`vite-plugin-wasm`插件，安装完成后在vite配置文件（没有就在前端根目录新建一个）中添加如下内容：
+然后就是重点了，vite目前不直接支持wasm，所以需要安装一个叫`vite-plugin-wasm`的插件，安装完成后在vite配置文件（没有就在前端根目录新建一个）中添加如下内容：
 
 ```javascript
 import wasm from "vite-plugin-wasm";
@@ -103,4 +103,4 @@ export default defineConfig({
 });
 ```
 
-配置完成后，不出意外的话就可以直接`pnpm install`+`pnpm run dev`跑起来了！什么？你说出意外了没跑起来怎么办？嘛，人生不如意十有八九啦，多多查看文档，或者直接看教程原文研究研究吧！
+配置完成后，直接运行`pnpm install`+`pnpm run dev`，OHHHHHH！顺利跑起来了！不过按照教程上说，在配置完成后，如果修改Lib.rs中的函数内容，只要用wasm-pack重新构建一下前端就可以同步修改，但我这边并不行，重新构建后还需要手动删了node_modules中的相应文件夹再重新执行`pnpm install`，然后浏览器页面需要ctrl+f5刷新才行，感觉是哪里没有配置好导致不能热加载。嘛，人生不如意十有八九啦！等什么时候有时间了来具体研究下。

@@ -11,14 +11,14 @@ hero:
     alt: Yomiko451
   actions:
     - theme: brand
-      text: 站点简介
+      text: 文档简介
       link: /doc/about
     - theme: alt
-      text: 编程技术
-      link: /doc/技术分享/
+      text: 技术札记
+      link: /doc/技术札记/
     - theme: alt
-      text: 娱乐资讯
-      link: /doc/娱乐资讯/
+      text: ACG杂录
+      link: /doc/ACG杂录/
 
 features:
   - title: 随缘更新
