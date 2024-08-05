@@ -24,8 +24,8 @@ features:
   - title: 随缘更新
     details: 更新什么的不存在的，哼！
   - title: 没有干货
-    details: 大海啊，你全是水。
+    details: 大海啊，你全是水！
   - title: 绝不客观
-    details: 立场，立场，还是TM的立场。
+    details: 立场，立场，还是TM的立场！
 ---
 

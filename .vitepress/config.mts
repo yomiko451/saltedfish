@@ -12,44 +12,44 @@ export default defineConfig({
 
     logo: '/logo.png',
     nav: [
-      { text: '技术札记', link: '/doc/技术札记/' },
+      { text: '学习札记', link: '/doc/学习札记/' },
       { text: 'ACG杂录', link: '/doc/ACG杂录/' },
     ],
 
     sidebar: {
-      '/doc/技术札记': [
+      '/doc/学习札记': [
         {
           text: '简介',
           items: [
-            { text: '分享什么', link: '/doc/技术札记/' },
+            { text: '分享什么', link: '/doc/学习札记/' },
             
           ]
         },
         {
           text: '前端',
           items: [
-            { text: '技术分享', link: '/doc/技术札记/' },
+            { text: '技术分享', link: '/doc/学习札记/' },
             
           ]
         },
         {
           text: 'Rust',
           items: [
-            { text: '初次尝试WebAssembly', link: '/doc/技术札记/Rust/初次尝试WebAssembly' },
-            { text: '数组索引取值与泛型默认参数', link: '/doc/技术札记/Rust/数组索引取值与泛型默认参数' }
+            { text: '初次尝试WebAssembly', link: '/doc/学习札记/Rust/初次尝试WebAssembly' },
+            { text: '数组索引取值与泛型默认参数', link: '/doc/学习札记/Rust/数组索引取值与泛型默认参数' }
           ]
         },
         {
           text: 'Python',
           items: [
-            { text: '技术分享', link: '/doc/技术札记/' },
+            { text: '技术分享', link: '/doc/学习札记/' },
             
           ]
         },
         {
           text: '其他',
           items: [
-            { text: 'markdown基本语法', link: '/doc/技术札记/' },
+            { text: 'markdown基本语法', link: '/doc/学习札记/' },
             
           ]
         }
