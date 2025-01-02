@@ -14,7 +14,7 @@ hero:
       text: 文档简介
       link: /doc/about
     - theme: alt
-      text: 技术札记
+      text: 学习札记
       link: /doc/技术札记/
     - theme: alt
       text: ACG杂录
