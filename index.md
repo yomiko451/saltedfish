@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Yomiko451"
   text: "个人在线文档"
-  tagline: 而视茫茫，而发苍苍，苟活一世，只是条咸鱼罢了
+  tagline: 而视茫茫，而发苍苍，苟活一世，只是条咸鱼罢了！
   image:
     src: /logo.png
     alt: Yomiko451
