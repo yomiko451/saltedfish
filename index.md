@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Yomiko451"
-  text: "个人在线文档"
+  text: "个人在线文档施工中……"
   tagline: 而视茫茫，而发苍苍，苟活一世，只是条咸鱼罢了！
   image:
     src: /logo.png
@@ -28,4 +28,3 @@ features:
   - title: 绝不客观
     details: 立场，立场，还是TM的立场！
 ---
-
